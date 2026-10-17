@@ -16,10 +16,13 @@ class Gafanhoto():
     def __str__(self):#Dunder Method
         return f'O gafanhoto(a) {self.nome} tem {self.idade} anos'
 
+    def __getstate__(self): #Subscrição de metodo
+        return f'Estado: nome: {self.nome} idade:{self.idade}'
+
 #Declaração de Objeto
 
 g1 = Gafanhoto("MARIA", 20)
-#g1.aniversario()
+g1.aniversario()
 print(g1)
-
+print(g1.__getstate__())
 #print(g1.__doc__) #Dunder Attribute
