@@ -1,4 +1,4 @@
-from rich.table import Table
+from rich.panel import Panel
 from rich import print
 
 class Produto:
@@ -7,10 +7,13 @@ class Produto:
         self.preco = preco
 
     def etiqueta(self):
-        tabela = Table(title='Produto', show_lines=True)
-        tabela.add_row(self.nome)
-        tabela.add_row(str(self.preco))
-        print(tabela)
+        conteudo = f'{self.nome.center(30, ' ')}'
+        conteudo += f'{'-' * 30}'
+        precof = f'R${self.preco:.2f}'
+        conteudo += f'{precof.center(30, '_').replace('.', ',')}'
+        etiqueta = Panel(conteudo, title='Produto', width= 34)
+        print(etiqueta)
+
 
 p1 = Produto('Limão', 10.50)
 p1.etiqueta()
