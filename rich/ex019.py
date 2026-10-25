@@ -17,7 +17,7 @@ class Livro:
                 print(f'[red]Você chegou ao fim do livro[/]')
                 break
             self.pagina_atual += 1
-            print(f'Página {self.pagina_atual}', end=' ')
+            print(f'Página {self.pagina_atual} :arrow_forward:', end=' ')
             sleep(0.5)
 
 
