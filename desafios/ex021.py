@@ -3,6 +3,7 @@ from rich import print
 class Caneta:
     def __init__(self, cor):
         self.cor = cor
+       
 
     def escrever(self, msg):
         if self.cor == 'azul':
@@ -11,8 +12,13 @@ class Caneta:
             print(f'[red]{msg}[/]')
         elif self.cor == 'verde':
             print(f'[green]{msg}[/]')
+
         else:
             print(msg)
+
+
+    def destampar(self):
+        self.tampada = False
 
 
 c1 = Caneta('azul')
