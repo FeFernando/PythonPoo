@@ -19,8 +19,6 @@ class Quadrado(Poligono):
         super().__init__(4)
         self.lado = lado
 
-
-
     def perimetro(self):
         return 4 * self.lado
 
