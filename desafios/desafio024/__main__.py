@@ -1,7 +1,7 @@
 from desafio24 import *
 
 def main():
-    bebida = Cafe()
+    bebida = Leite()
     bebida.preparar()
 
 main()
